@@ -1,0 +1,13 @@
+{
+  "image": "iqtlabs/test-worker-1",
+  "version": "latest",
+  "labels": "",
+  "stage": "analysis",
+  "viewableOutput": true,
+  "outputs": [
+    "test"
+  ],
+  "inputs": [
+    "test"
+  ]
+}

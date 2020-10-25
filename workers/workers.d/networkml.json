@@ -1,0 +1,25 @@
+{
+  "name": "networkml",
+  "image": "iqtlabs/networkml",
+  "version": "v0.6.1",
+  "labels": "",
+  "stage": "analysis",
+  "viewableOutput": true,
+  "command": [
+    "-r"
+  ],
+  "environment": {
+    "RABBIT_HOST": "messenger",
+    "RABBIT_EXCHANGE": "",
+    "RABBIT_ROUTING_KEY": "task_queue",
+    "RABBIT_QUEUE": "True",
+    "RABBIT_QUEUE_NAME": "task_queue"
+  },
+  "contentType": "application/json",
+  "outputs": [
+    "rabbitmq"
+  ],
+  "inputs": [
+    "pcap-splitter"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "pcap-splitter",
+  "image": "iqtlabs/pcap_to_node_pcap",
+  "version": "v0.11.16",
+  "labels": "",
+  "stage": "preprocessing",
+  "viewableOutput": false,
+  "environment": {
+    "rabbit": "true"
+  },
+  "outputs": [
+    "pcap"
+  ],
+  "inputs": [
+    "pcap-dot1q"
+  ]
+}

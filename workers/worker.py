@@ -172,10 +172,18 @@ def setup_redis(host='redis', port=6379, db=0):
     return r
 
 
-def load_workers():
-    with open('/definitions/workers.json') as json_file:
-        workers = json.load(json_file)
-    return workers
+# Note: This code is duplicative of that in web/app/helpers.py
+def load_workers(tools_dir='/definitions/workers.d'):
+    workers = []
+    filenames os.listdir(tools_dir)
+    for file_name in [name for name in filenames if name.endswith('.json')]:
+        with open(os.path.join(tools_dir, file_name)) as json_file:
+            description = json.load(json_file)
+        if 'name' not in description:
+            # Inherit worker/tool name from file name if necessary
+            description['name'] = os.path.splitext(file_name)[0]
+        workers.append(description)
+    return {'workers': workers}
 
 
 if __name__ == "__main__":

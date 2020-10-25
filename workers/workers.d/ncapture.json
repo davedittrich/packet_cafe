@@ -1,0 +1,26 @@
+{
+  "name": "ncapture",
+  "image": "iqtlabs/ncapture",
+  "version": "v0.11.16",
+  "labels": "",
+  "stage": "preprocessing",
+  "viewableOutput": false,
+  "command": [
+    "/tmp/run.sh",
+    "pcapfile:",
+    "60",
+    "id",
+    "1",
+    "ip"
+  ],
+  "environment": {
+    "rabbit": "true"
+  },
+  "outputs": [
+    "pcap"
+  ],
+  "inputs": [
+    "pcap",
+    "pcapng"
+  ]
+}

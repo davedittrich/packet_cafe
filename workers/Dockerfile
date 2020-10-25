@@ -30,4 +30,4 @@ COPY . /app
 WORKDIR /app
 ENV PYTHONUNBUFFERED 1
 
-CMD (flask run > /dev/null 2>&1) & (cp -u /app/workers.json /definitions/workers.json && python3 worker.py)
+CMD (flask run > /dev/null 2>&1) & (cp -ru /app/workers.d /definitions && python3 worker.py)

@@ -1,0 +1,17 @@
+{
+  "name": "pcap-dot1q",
+  "image": "iqtlabs/tcprewrite_dot1q",
+  "version": "v0.11.16",
+  "labels": "",
+  "stage": "preprocessing",
+  "viewableOutput": false,
+  "environment": {
+    "rabbit": "true"
+  },
+  "outputs": [
+    "pcap"
+  ],
+  "inputs": [
+    "ncapture"
+  ]
+}

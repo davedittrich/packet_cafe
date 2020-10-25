@@ -1,0 +1,19 @@
+{
+  "name": "mercury",
+  "image": "iqtlabs/mercury",
+  "version": "v0.11.16",
+  "labels": "",
+  "stage": "analysis",
+  "viewableOutput": true,
+  "environment": {
+    "rabbit": "true"
+  },
+  "contentType": "application/json",
+  "outputs": [
+    "rabbitmq"
+  ],
+  "inputs": [
+    "pcap",
+    "pcapng"
+  ]
+}

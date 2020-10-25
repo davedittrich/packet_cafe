@@ -1,0 +1,16 @@
+{
+  "image": "iqtlabs/test-worker-2",
+  "version": "v0.1.6",
+  "labels": "",
+  "stage": "preprocessing",
+  "viewableOutput": false,
+  "environment": {
+    "rabbit": "true"
+  },
+  "outputs": [
+    "test"
+  ],
+  "inputs": [
+    "test"
+  ]
+}

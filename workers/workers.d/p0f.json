@@ -1,0 +1,15 @@
+{
+  "name": "p0f",
+  "image": "iqtlabs/p0f",
+  "version": "v0.11.16",
+  "labels": "",
+  "stage": "analysis",
+  "viewableOutput": true,
+  "contentType": "application/json",
+  "outputs": [
+    "rabbitmq"
+  ],
+  "inputs": [
+    "pcap-splitter"
+  ]
+}
