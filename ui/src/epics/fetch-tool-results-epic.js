@@ -24,6 +24,7 @@ const fetchToolResultsEpic = (action$, store, ajax = rxAjax) => {
           return {'tool': tool, 'file': fileId, 'results': result.response };
         })
         ,map(setToolResults)
+
       );
     })
     ,catchError((error) => {
