@@ -1,0 +1,14 @@
+{
+  "name": "pcapplot",
+  "image": "iqtlabs/pcapplot",
+  "version": "v0.1.7",
+  "labels": "",
+  "stage": "analysis",
+  "viewableOutput": true,
+  "outputs": [
+    "file"
+  ],
+  "inputs": [
+    "pcap-splitter"
+  ]
+}
