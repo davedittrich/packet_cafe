@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.13
 LABEL maintainer="Charlie Lewis <clewis@iqt.org>"
 
 COPY requirements.txt requirements.txt
@@ -6,6 +6,7 @@ COPY requirements.txt requirements.txt
 RUN apk add --update \
     curl \
     gcc \
+    g++ \
     libmagic \
     linux-headers \
     musl-dev \
@@ -16,6 +17,7 @@ RUN apk add --update \
     && pip3 install --no-cache-dir -r requirements.txt \
     && apk del \
     gcc \
+    g++ \
     linux-headers \
     musl-dev \
     python3-dev \
@@ -34,4 +36,4 @@ ENV PYTHONUNBUFFERED 1
 
 EXPOSE 8000
 
-CMD (nginx) & (gunicorn -b localhost:8001 -k gevent -w 4 --access-logfile /var/log/access.log --keep-alive 10 --reload app.app --timeout 600)
+CMD (nginx) & (gunicorn -b localhost:8001 -k eventlet -w 4 --access-logfile /var/log/access.log --keep-alive 10 --reload app.app --timeout 600)
