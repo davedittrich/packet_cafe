@@ -5,14 +5,7 @@
   "labels": "",
   "stage": "preprocessing",
   "viewableOutput": false,
-  "command": [
-    "/tmp/run.sh",
-    "pcapfile:",
-    "60",
-    "id",
-    "1",
-    "ip"
-  ],
+  "command": ["/tmp/run.sh", "pcapfile:", "60", "id", "1", "ip"],
   "environment": {
     "rabbit": "true"
   },

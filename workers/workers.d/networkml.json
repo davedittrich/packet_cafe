@@ -5,9 +5,7 @@
   "labels": "",
   "stage": "analysis",
   "viewableOutput": true,
-  "command": [
-    "-r"
-  ],
+  "command": ["-r"],
   "environment": {
     "RABBIT_HOST": "messenger",
     "RABBIT_EXCHANGE": "",
